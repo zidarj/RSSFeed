@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RFImageTableViewCell" rowHeight="187" id="KGk-i7-Jjw" customClass="RFImageTableViewCell" customModule="RSSFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sgN-eM-bpV">
+                        <rect key="frame" x="134.5" y="20" width="147" height="147"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sgN-eM-bpV" secondAttribute="height" multiplier="1:1" id="vFD-cM-rv2"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-8t-7E7">
+                        <rect key="frame" x="259" y="4.5" width="45.5" height="31"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="clear.fill" catalog="system"/>
+                        <connections>
+                            <action selector="onTouchRemoveButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Ut-lh-x89"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sgN-eM-bpV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5Lb-d6-fMf"/>
+                    <constraint firstItem="sgN-eM-bpV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="X7o-fc-OIz"/>
+                    <constraint firstItem="eGa-8t-7E7" firstAttribute="centerX" secondItem="sgN-eM-bpV" secondAttribute="trailing" id="f8u-5p-gDN"/>
+                    <constraint firstItem="sgN-eM-bpV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jIN-Z7-1xQ"/>
+                    <constraint firstItem="eGa-8t-7E7" firstAttribute="centerY" secondItem="sgN-eM-bpV" secondAttribute="top" id="nr2-h8-Hnl"/>
+                    <constraint firstAttribute="bottom" secondItem="sgN-eM-bpV" secondAttribute="bottom" constant="20" id="vdJ-h6-1hR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="feedImageView" destination="sgN-eM-bpV" id="Vm3-1B-lMA"/>
+                <outlet property="removeButton" destination="eGa-8t-7E7" id="tRH-rE-EVF"/>
+            </connections>
+            <point key="canvasLocation" x="201.44927536231884" y="158.37053571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
